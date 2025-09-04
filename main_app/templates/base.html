@@ -1,0 +1,44 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}Rainfall Database{% endblock %}
+
+{% block navbar %}
+<div class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Home</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                  <li class="dropdown">
+                      <a class="dropdown-toggle"
+                          data-toggle="dropdown" href="/search">
+                          Search By<span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                          <li><a href="/search">Years</a></li>
+                          <li><a href="/search2">Year/Month</a></li>
+                          <li><a href="/search3">Months</a></li>
+                          <li><a href="/search4">Droughts</a></li>
+                      </ul>
+                  </li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    {% block page_content %}{% endblock %}
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+{% endblock %}
